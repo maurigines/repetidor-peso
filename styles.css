@@ -1,0 +1,62 @@
+.indicator {
+  background-color: #0055a4;
+  border-radius: 60px;
+  padding: 40px; /* Aumenta el padding para más espacio interno */
+  width: 80%;
+  max-width: 1000px; /* Aumenta el max-width si lo deseas más ancho */
+  text-align: center;
+  color: white;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  min-height: 400px; /* Aumenta la altura mínima del contenedor */
+}
+
+.indicator .top-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Aumenta el margen inferior para más espacio */
+}
+
+.indicator .top-labels div {
+  font-size: 2em; /* Aumenta el tamaño de fuente */
+}
+
+.indicator .line {
+  border-top: 6px solid white; /* Aumenta el grosor de la línea */
+  margin: 20px 0; /* Aumenta el margen */
+}
+
+.indicator .display {
+  font-size: 7em; /* Aumenta el tamaño de la fuente */
+  margin: 36px 0; /* Aumenta el margen */
+}
+
+.indicator .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px; /* Aumenta el margen superior */
+}
+
+.indicator .buttons .button {
+  background-color: #003399;
+  border-radius: 60px;
+  padding: 20px 40px; /* Aumenta el padding de los botones */
+  font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+  cursor: pointer;
+}
+
+.display {
+  background-color: #000;
+  color: red;
+  font-size: 8em; /* Aumenta el tamaño de la fuente de la pantalla */
+  padding: 25px; /* Aumenta el padding para más espacio */
+  border-radius: 80px;
+  margin-bottom: 40px; /* Aumenta el margen inferior */
+  font-family: "Digital", sans-serif;
+  width: 90%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
