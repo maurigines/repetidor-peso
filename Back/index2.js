@@ -27,13 +27,15 @@ function connectToSerialPort() {
     parser = port.pipe(new ReadlineParser({ delimiter: "\r" }));  // El delimitador es /r
 
     parser.on("data", (data) => {
-      console.log("Data recibida: ", data);  // Para debug, puedes eliminar esto luego
-      // Extraemos los valores intermedios del string como mencionas
-      let weightString = data.slice(1, -2).trim(); // Sacamos los primeros y últimos caracteres, eliminamos espacios
-      let weightValue = parseInt(weightString, 10); // Convertimos a número
+      console.log("Data recibida: ", data);  // Para debug
 
-      if (!isNaN(weightValue)) {
-        currentWeight = weightValue.toString(); // Guardamos el valor si es un número
+      // Utilizamos una expresión regular para encontrar los números en el string
+      let match = data.match(/\d{1,5}/);  // Buscar secuencias de hasta 5 dígitos
+
+      if (match) {
+        currentWeight = match[0]; // Guardamos solo los dígitos del medio (el peso en kg)
+      } else {
+        currentWeight = "0";  // Si no encontramos un valor válido, devolvemos 0 por defecto
       }
     });
 
